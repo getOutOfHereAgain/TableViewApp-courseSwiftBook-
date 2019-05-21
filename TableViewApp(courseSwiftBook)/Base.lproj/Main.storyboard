@@ -22,13 +22,68 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="ez5-K7-cR0">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="75" id="ez5-K7-cR0" customClass="CustomCell" customModule="TableViewApp_courseSwiftBook_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ez5-K7-cR0" id="BnM-kD-DLQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vbn-TH-feY">
+                                                    <rect key="frame" x="15" y="7.5" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="mTV-RO-124"/>
+                                                        <constraint firstAttribute="width" constant="60" id="wb8-bw-ox6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grr-AX-HNd">
+                                                    <rect key="frame" x="80" y="5" width="275" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="g9H-Ja-OVt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZb-8O-MKU">
+                                                    <rect key="frame" x="80" y="28" width="275" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="Cm4-aZ-b6O"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCW-ty-hpP">
+                                                    <rect key="frame" x="80" y="48" width="275" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="4sh-Mh-MTW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="grr-AX-HNd" firstAttribute="top" secondItem="BnM-kD-DLQ" secondAttribute="top" constant="5" id="1pq-VI-WX3"/>
+                                                <constraint firstItem="EZb-8O-MKU" firstAttribute="top" secondItem="grr-AX-HNd" secondAttribute="bottom" constant="4" id="CWo-OV-0Ug"/>
+                                                <constraint firstAttribute="trailing" secondItem="yCW-ty-hpP" secondAttribute="trailing" constant="20" id="DpR-R5-sNu"/>
+                                                <constraint firstItem="grr-AX-HNd" firstAttribute="leading" secondItem="Vbn-TH-feY" secondAttribute="trailing" constant="5" id="Nya-eG-oMd"/>
+                                                <constraint firstItem="Vbn-TH-feY" firstAttribute="leading" secondItem="BnM-kD-DLQ" secondAttribute="leading" constant="15" id="QaN-a6-PKL"/>
+                                                <constraint firstAttribute="trailing" secondItem="EZb-8O-MKU" secondAttribute="trailing" constant="20" id="dzG-df-JIW"/>
+                                                <constraint firstAttribute="trailing" secondItem="grr-AX-HNd" secondAttribute="trailing" constant="20" id="fDs-FO-lvi"/>
+                                                <constraint firstItem="Vbn-TH-feY" firstAttribute="centerY" secondItem="BnM-kD-DLQ" secondAttribute="centerY" id="mNk-3x-8tP"/>
+                                                <constraint firstItem="yCW-ty-hpP" firstAttribute="top" secondItem="EZb-8O-MKU" secondAttribute="bottom" constant="4" id="mmp-TA-Al5"/>
+                                                <constraint firstItem="EZb-8O-MKU" firstAttribute="leading" secondItem="grr-AX-HNd" secondAttribute="leading" id="oVK-EN-4wM"/>
+                                                <constraint firstItem="yCW-ty-hpP" firstAttribute="leading" secondItem="EZb-8O-MKU" secondAttribute="leading" id="ps7-h6-CHW"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageOut" destination="Vbn-TH-feY" id="rhx-81-MiC"/>
+                                            <outlet property="nameLable" destination="grr-AX-HNd" id="AKr-mf-GwX"/>
+                                            <outlet property="placeLabel" destination="EZb-8O-MKU" id="wUo-kX-IYm"/>
+                                            <outlet property="typeOfPlace" destination="yCW-ty-hpP" id="hPB-5l-aKY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

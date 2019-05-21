@@ -25,11 +25,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        cell.textLabel?.text = namedOfPlaces[indexPath.row]
-        cell.imageView?.image = UIImage(named: namedOfPlaces[indexPath.row])
-        cell.imageView?.layer. = cell.frame.height * 0,8
-        cell.imageView?.layer.cornerRadius = cell.frame.height/2
-        cell.imageView?.clipsToBounds = true
+        
+        if let customCell = cell as? CustomCell {
+            customCell.imageOut.image = UIImage(named: namedOfPlaces[indexPath.row])
+            customCell.imageOut.layer.cornerRadius = customCell.imageOut.frame.height/2
+            customCell.imageOut.clipsToBounds = true
+            
+            customCell.nameLable.text = namedOfPlaces[indexPath.row]
+            customCell.placeLabel.text = "Place?!"
+            customCell.typeOfPlace.text = "Type?!"
+        }
+        
+//        cell.textLabel?.text = namedOfPlaces[indexPath.row]
+//        cell.imageView?.image = UIImage(named: namedOfPlaces[indexPath.row])
+//        cell.imageView?.bounds.height = cell.frame.height * 0.8
+//        cell.imageView?.layer.cornerRadius = cell.frame.height/2
+//        cell.imageView?.clipsToBounds = true
         return cell
     }
     
